@@ -9,8 +9,36 @@ iteration_00_06/28/2022
   * testing with the "tutorial.c" (ps: need to custom your makefile to test this)
   * if test result get "found minimum at f(0.333333,0.296296) = 0.5443310474" then good to go
 
-- optimization problem statement
-  * min(J(u)) here J includes "for" loop states iteration X(i+1)<=X(i) update and u[15]={} fifteen decision variables so called inputs/controls
-  * 
+- workflow
+  * problem statement: min(J(u)) here J includes "for" loop states iteration X(i+1)<=X(i) update and u[15]={} fifteen decision variables so called inputs/controls, this optimization problem without (equality constraint, inequality constraint) and with (decision variables, cost, bounds)
+  * finished the minimal nlopt optimization template to do the single step optimization
+  
+- coding & debugging
+  * using nlopt be care to set right number of decision variables
+  * using nlopt be care to set the decision variables right between the low and up bounds
+  * using nlopt if cost "for" loop miss some decision variables ahead may cause the infinite loop eg:
+			double U[6]={} // this case have U[0] U[1] U[2] U[3] U[4] U[5]
+			for (int i=0; i<5; i++)
+			{
+				cost = cost + U(i+1) // this case only include U[1] U[2] U[3] U[4] U[5] that is missing U[0]
+			}
+			// this will lead to the infinite optimization loop (never stop the loop)
+	* coding in c be care of the array syntax that is "X[0]" not "X(0)"
+	* coding in c be care not to put the variables definition "double X[3]={}" inside the "for" loop that will cause the re-definition error
+	* coding in c better to use local variables taking place of the global variables inside the iteration of the child function
+			double X[3]={} // this is the global variables
+			double child_iteration_function()
+			{
+				double XX[3]={X[0], X[1], X[2]} // using local variables XX to take place of the global variables X
+				for (int i=0; i<5; i++)
+				{
+					// XX iteration loop
+				}
+			}
+ 
+- next thing to do
+	* matrix multiplication utility function
+	* think about global and local variables usual way to deal with
+	
    
   
