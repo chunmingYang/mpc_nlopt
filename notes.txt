@@ -10,3 +10,7 @@ iteration_00_06/28/2022
   * if test result get "found minimum at f(0.333333,0.296296) = 0.5443310474" then good to go
 
 - optimization problem statement
+  * min(J(u)) here J includes "for" loop states iteration X(i+1)<=X(i) update and u[15]={} fifteen decision variables so called inputs/controls
+  * 
+   
+  
