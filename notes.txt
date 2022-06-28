@@ -6,4 +6,7 @@ iteration_00_06/28/2022
   * create a soft symbolic link of the nlopt header file "ln -s /opt/homebrew/include/nlopt.h nlopt.h" in the "include" folder
   * find the nlopt dynamic library file from address "opt/homebrew/lib"
   * create a soft symbolic link of the library file "ln -s /opt/homebrew/lib/libnlopt.dylib libnlopt.dylib" in the "bin" folder
-  * testing with the "tutorial.c" using ""
+  * testing with the "tutorial.c" (ps: need to custom your makefile to test this)
+  * if test result get "found minimum at f(0.333333,0.296296) = 0.5443310474" then good to go
+
+- optimization problem statement
