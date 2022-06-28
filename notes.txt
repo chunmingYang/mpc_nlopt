@@ -11,7 +11,7 @@ iteration_00_06/28/2022
 
 - workflow
   * problem statement: min(J(u)) here J includes "for" loop states iteration X(i+1)<=X(i) update and u[15]={} fifteen decision variables so called inputs/controls, this optimization problem without (equality constraint, inequality constraint) and with (decision variables, cost, bounds)
-  * finished the minimal nlopt optimization template to do the single step optimization
+  * finished the minimal nlopt optimization template to do the single step optimization (verified by matlab fmincon)
   
 - coding & debugging
   * using nlopt be care to set right number of decision variables
