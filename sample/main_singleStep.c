@@ -26,7 +26,7 @@ double U[15] = {};                      // we have the special index format here
 double mycost(unsigned n, const double *U)
 {
     // manual iteration initialization --- the total iteration time decided by the receding horizon
-    double XX[3] = {X[1], X[2], X[3]}; // using local variables to avoid error
+    double XX[3] = {X[0], X[1], X[2]}; // using local variables to avoid error
     double X_Xref[3];                  // X-Xref
     double mul[3];                     // transpose(X-Xref)*Q
     double cost;                       // cost initialization
