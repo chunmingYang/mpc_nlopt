@@ -41,4 +41,5 @@ iteration_00_06/28/2022
 	* think about global and local variables usual way to deal with
 	
    
-  
+iteration_00_06/28/2022
+- when apply this template for the pranav's a1 code to do the mpc trajectory planning i find out that "mycost" function can only pass custom variables via most global initialization
